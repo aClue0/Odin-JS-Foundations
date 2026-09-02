@@ -1,13 +1,19 @@
 let input = document.querySelector("#input");
 let para = document.querySelector("p");
 
-let add7button = document.querySelector("#calc7");
-
-function add7(num) {
-  if (isNaN(num)) return `Not a number!`;
-  return Number(input.value) + 7;
+function multiply(num1, num2) {
+  return num1 * num2;
 }
-add7button.addEventListener("click", () => {
-  let calculatedValue = add7(Number(input.value));
-  para.textContent = `The result is ${calculatedValue}`;
-});
+console.log(multiply(4, 2));
+
+let testingWord = "ABCD";
+function capitalize(word) {
+  word = word.toLowerCase();
+  return word.charAt(0).toUpperCase() + word.slice(1);
+}
+console.log(capitalize(testingWord));
+
+function lastLetter(word) {
+  return word.slice(-1);
+}
+console.log(lastLetter(testingWord));
