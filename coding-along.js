@@ -1,6 +1,5 @@
 let input = document.querySelector("#input");
 let para = document.querySelector("p");
-
 function multiply(num1, num2) {
   return num1 * num2;
 }
