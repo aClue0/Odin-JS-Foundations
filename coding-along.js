@@ -1,18 +1,5 @@
-let input = document.querySelector("#input");
-let para = document.querySelector("p");
-function multiply(num1, num2) {
-  return num1 * num2;
-}
-console.log(multiply(4, 2));
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
-let testingWord = "ABCD";
-function capitalize(word) {
-  word = word.toLowerCase();
-  return word.charAt(0).toUpperCase() + word.slice(1);
-}
-console.log(capitalize(testingWord));
-
-function lastLetter(word) {
-  return word.slice(-1);
-}
-console.log(lastLetter(testingWord));
+const filtered = cats.filter((cat) => cat.startsWith("L"));
+console.log(filtered);
+// [ "Leopard", "Lion" ]
