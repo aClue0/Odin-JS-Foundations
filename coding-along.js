@@ -1,5 +1,8 @@
-const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+const output = document.querySelector(".output");
+output.textContent = "";
 
-for (const cat of cats) {
-  console.log(cat);
-}
+// let i = 10;
+
+// const para = document.createElement('p');
+// para.textContent = ;
+// output.appendChild(para);
