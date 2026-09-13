@@ -19,6 +19,6 @@ body {
 }
 
 .output {
-  height: 410px;
+  height: 100px;
   overflow: auto;
 }

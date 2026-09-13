@@ -1,19 +1,21 @@
-const output = document.querySelector(".output");
-output.textContent = "";
+const people = [
+  "Chris",
+  "Anne",
+  "Colin",
+  "Terri",
+  "Phil",
+  "Lola",
+  "Sam",
+  "Kay",
+  "Bruce",
+];
 
-let num = 10;
+const admitted = document.querySelector(".admitted");
+const refused = document.querySelector(".refused");
+admitted.textContent = "Admit: ";
+refused.textContent = "Refuse: ";
 
-while (num >= 0) {
-  const para = document.createElement("p");
-  console.log(num);
+// loop starts here
 
-  if (num === 10) {
-    para.textContent = `Countdown 10!`;
-  } else if (num === 0) {
-    para.textContent = "Blast off!";
-  } else {
-    para.textContent = `${num}`;
-  }
-  output.appendChild(para);
-  num--;
-}
+// refused.textContent += ...;
+// admitted.textContent += ...;
