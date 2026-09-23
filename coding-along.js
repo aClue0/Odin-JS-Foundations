@@ -36,3 +36,18 @@ function camelize(wordsToCamelize) {
 }
 
 console.log(camelize(words));
+
+// better solution I can just use .map instead of a for function
+function camelizeBetter(wordsToCamelize) {
+  return wordsToCamelize.map((word) => {
+    return word
+      .split("-")
+      .map((part, index) => {
+        if (index === 0) return part.toLowerCase();
+        return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
+      })
+      .join("");
+  });
+}
+console.log(camelizeBetter(words));
+
