@@ -51,3 +51,11 @@ function camelizeBetter(wordsToCamelize) {
 }
 console.log(camelizeBetter(words));
 
+// ----------------------------------------------------
+// Filter Range
+arr = [1, 2, 3, 3, 4, 5, 6, 7, 2, 8, 9, 10];
+function filterRange(arr, a, b) {
+  return arr.filter((item) => item >= a && item <= b);
+}
+
+console.log(filterRange(arr, 2, 7));
