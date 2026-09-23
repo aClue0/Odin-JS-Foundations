@@ -82,3 +82,16 @@ arr = [5, 2, 1, -10, 8];
 arr.sort((a, b) => b - a);
 
 console.log(arr); // 8, 5, 2, 1, -10
+// ----------------------------------------------------
+// copy and sort array
+arr = ["HTML", "JavaScript", "CSS"];
+
+function copySorted(arr) {
+  // This doesn't work because result points at the reference of arr so it's not a different array
+  // let result = arr;
+  // return result.sort();
+
+  return arr.slice().sort();
+}
+let sorted = copySorted(arr);
+
