@@ -59,3 +59,18 @@ function filterRange(arr, a, b) {
 }
 
 console.log(filterRange(arr, 2, 7));
+// ----------------------------------------------------
+// Filter Range inplace
+function filterRangeInPlace(arr, a, b) {
+  for (let i = 0; i < arr.length; i++) {
+    const number = arr[i];
+    if (number < a || number > b) {
+      arr.splice(i, 1);
+      // This is really important because we removed an item from the array so the length is --
+      i--;
+    }
+  }
+}
+
+filterRangeInPlace(arr, 3, 6);
+console.log(arr);
