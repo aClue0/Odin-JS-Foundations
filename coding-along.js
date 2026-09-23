@@ -10,7 +10,13 @@ console.log(trippledEvenSum);
 // Doing the other Java.info Exercises for arrays
 // Translate border-left-width to borderLeftWidth
 
-let words = ["java-script-info-exercise", "man-am-i-dumb", "love-your-parents"];
+let words = [
+  "java-script-info-exercise",
+  "man-am-i-dumb",
+  "love-your-parents",
+  "--web-kit",
+  "background-color",
+];
 
 function camelize(wordsToCamelize) {
   let result = [];
