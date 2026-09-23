@@ -95,3 +95,28 @@ function copySorted(arr) {
 }
 let sorted = copySorted(arr);
 
+console.log(sorted); // CSS, HTML, JavaScript
+console.log(arr); // HTML, JavaScript, CSS (no changes)
+// ----------------------------------------------------
+// shuffle array
+
+arr = [1, 2, 3];
+function shuffle(arr) {
+  const LENGTH = arr.length;
+  for (let i = 0; i < arr.length; i++) {
+    const num = arr[i];
+    arr.splice(i, 1);
+    const randomNumber = Math.floor(Math.random() * (LENGTH - 1) + 1);
+    arr.splice(randomNumber, 0, num);
+  }
+  console.log(arr);
+}
+shuffle(arr);
+// arr = [3, 2, 1]
+
+shuffle(arr);
+// arr = [2, 1, 3]
+
+shuffle(arr);
+// arr = [3, 1, 2]
+// ...
