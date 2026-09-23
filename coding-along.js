@@ -1,21 +1,10 @@
-const people = [
-  "Chris",
-  "Anne",
-  "Colin",
-  "Terri",
-  "Phil",
-  "Lola",
-  "Sam",
-  "Kay",
-  "Bruce",
-];
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
-const admitted = document.querySelector(".admitted");
-const refused = document.querySelector(".refused");
-admitted.textContent = "Admit: ";
-refused.textContent = "Refuse: ";
+let trippledEven = arr
+  .filter((num) => num % 2 === 0)
 
-// loop starts here
+  .map((num) => num * 3);
 
-// refused.textContent += ...;
-// admitted.textContent += ...;
+for (const num of trippledEven) {
+  console.log(num);
+}
