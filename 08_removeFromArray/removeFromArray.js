@@ -1,13 +1,5 @@
-const removeFromArray = function (arr) {
-  let numbersToRemove = Array.from(arguments).slice(1);
-  for (let i = 0; i < numbersToRemove.length; i++) {
-    const num = numbersToRemove[i];
-    while (arr.includes(num)) {
-      let index = arr.indexOf(num);
-      arr.splice(index, 1);
-    }
-  }
-  return arr;
+const removeFromArray = function (arr, ...args) {
+  return arr.filter((num) => !args.includes(num));
 };
 
 // Do not edit below this line
