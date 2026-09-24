@@ -4,7 +4,6 @@ const removeFromArray = function (arr) {
     const num = numbersToRemove[i];
     while (arr.includes(num)) {
       let index = arr.indexOf(num);
-      if (index < 0) continue;
       arr.splice(index, 1);
     }
   }
