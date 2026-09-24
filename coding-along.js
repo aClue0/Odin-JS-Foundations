@@ -105,6 +105,7 @@ function shuffle(arr) {
   const LENGTH = arr.length;
   for (let i = 0; i < arr.length; i++) {
     const num = arr[i];
+
     arr.splice(i, 1);
     const randomNumber = Math.floor(Math.random() * (LENGTH - 1) + 1);
     arr.splice(randomNumber, 0, num);
@@ -120,3 +121,28 @@ shuffle(arr);
 shuffle(arr);
 // arr = [3, 1, 2]
 // ...
+// Unique array
+function unique(arr) {
+  let unique = [];
+  for (const word of arr) {
+    if (unique.includes(word)) {
+      continue;
+    }
+    unique.push(word);
+  }
+  return unique;
+}
+
+let strings = [
+  "Hare",
+  "Krishna",
+  "Hare",
+  "Krishna",
+  "Krishna",
+  "Krishna",
+  "Hare",
+  "Hare",
+  ":-O",
+];
+
+console.log(unique(strings)); // Hare, Krishna, :-O
