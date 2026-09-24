@@ -3,9 +3,11 @@ const removeFromArray = function (arr) {
   console.log(numbersToRemove);
   for (let i = 0; i < numbersToRemove.length; i++) {
     const num = numbersToRemove[i];
-    index = arr.indexOf(num);
-    if (index < 0) continue;
-    arr.splice(index, 1);
+    while (arr.includes(num)) {
+      index = arr.indexOf(num);
+      if (index < 0) continue;
+      arr.splice(index, 1);
+    }
   }
   console.log(arr);
   return arr;
