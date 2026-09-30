@@ -1,9 +1,22 @@
-const sect = document.querySelector("section");
-const para = document.createElement("p");
-para.textContent = "Hi! Don't get eaten by the dinosauroos";
-sect.appendChild(para);
+const addBtn = document.querySelector("#addItem");
+const input = document.querySelector("#item");
+const shoppingItems = document.querySelector("#shoppingItems");
 
-const textNode = document.createTextNode(" The best in the west");
-const linkPara = document.querySelector("p");
-linkPara.appendChild(textNode);
-sect.appendChild(linkPara);
+addBtn.addEventListener("click", (ev) => {
+  ev.preventDefault();
+  let item = input.value;
+  input.value = "";
+
+  const newItem = document.createElement("li");
+  newItem.textContent = item;
+
+  const deleteButton = document.createElement("button");
+  deleteButton.textContent = "Delete";
+  newItem.appendChild(deleteButton);
+
+  deleteButton.addEventListener("click", (ev) => {
+    ev.target.parentElement.remove();
+  });
+  shoppingItems.appendChild(newItem);
+  input.focus();
+});

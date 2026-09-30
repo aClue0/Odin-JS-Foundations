@@ -1,14 +1,23 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple DOM example</title>
     <script type="module" src="coding-along.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Shopping list example</title>
+    <style></style>
   </head>
   <body>
-      <section>
-        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
-        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
-      </section>
+    <h1>My shopping list</h1>
+
+    <form>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item" />
+      <button id="addItem">Add Item</button>
+    </form>
+
+    <ul id="shoppingItems"></ul>
+    <script></script>
+  </body>
 </html>
