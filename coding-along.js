@@ -135,11 +135,17 @@ const data = [
 ];
 // make a key for each word and for each instance increase the value
 function sumInstances(data) {
-  let instances = {};
-  for (const word of data) {
-    if (!instances[word]) instances[word] = 0;
-    instances[word]++;
-  }
-  return instances;
+  //   let instances = {};
+  //   for (const word of data) {
+  //     if (!instances[word]) instances[word] = 0;
+  //     instances[word]++;
+  //   }
+  //   return instances;
+  return data.reduce((obj, word) => {
+    if (!obj[word]) obj[word] = 0;
+
+    obj[word]++;
+    return obj;
+  }, {});
 }
 console.table(sumInstances(data));
