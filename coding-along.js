@@ -39,7 +39,6 @@
 // So, actually you need to map one array of objects to another. Try using => here. There’s a small catch.
 
 // Sort users by age
-// Sort users by age
 // importance: 5
 // Write the function sortByAge(users) that gets an array of objects with the age property and sorts them by age.
 //
@@ -62,7 +61,6 @@
 // console.log(arr[2].name); // Pete
 
 // Get average age
-// Get average age
 // importance: 4
 // Write the function getAverageAge(users) that gets an array of objects with property age and returns the average age.
 //
@@ -76,12 +74,7 @@ let mary = { name: "Mary", age: 29 };
 
 let arr = [john, pete, mary];
 function getAverageAge(arr) {
-  let average = 0;
-  for (let i = 0; i < arr.length; i++) {
-    const user = arr[i];
-    average += user.age;
-  }
-  return average / arr.length;
+  return arr.reduce((total, currUser) => total + currUser.age, 0) / arr.length;
 }
 console.log(getAverageAge(arr)); // (25 + 30 + 29) / 3 = 28
 // Create keyed object from array
