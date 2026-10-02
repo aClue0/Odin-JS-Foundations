@@ -72,7 +72,7 @@ console.table(
   }),
 );
 
-// Array.prototype.map()
+// Array.prototypetablemap()
 // 2. Give us an array of the inventors first and last names
 let fullnames = inventors.map((inventor) => {
   return `${inventor.first} ${inventor.last}`;
@@ -111,7 +111,10 @@ console.table(sortedbyYearsInventors);
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
-
+let sortedAlpha = inventors.sort((inventor1, inventor2) =>
+  inventor1.last.localeCompare(inventor2.last),
+);
+console.table(sortedAlpha);
 // 8. Reduce Exercise
 // Sum up the instances of each of these
 const data = [
@@ -130,3 +133,13 @@ const data = [
   "car",
   "truck",
 ];
+// make a key for each word and for each instance increase the value
+function sumInstances(data) {
+  let instances = {};
+  for (const word of data) {
+    if (!instances[word]) instances[word] = 0;
+    instances[word]++;
+  }
+  return instances;
+}
+console.table(sumInstances(data));
