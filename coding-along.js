@@ -30,8 +30,8 @@ let mary = { name: "Mary", surname: "Key", id: 3 };
 let users = [john, pete, mary];
 
 let usersMapped = users.map((user) => {
-  const fullName = user.name + ` ${user.surname}`;
-  return { fullName, id: user.id };
+  const fullName = [user.name, user.surname];
+  return { fullName: fullName.join(" "), id: user.id };
 });
 
 /*
