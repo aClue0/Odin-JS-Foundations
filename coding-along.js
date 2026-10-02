@@ -9,13 +9,9 @@ let pete = { name: "Pete", age: 30 };
 let mary = { name: "Mary", age: 28 };
 
 let users = [john, pete, mary];
-let names = [];
-for (const name in users) {
-  if (users.hasOwnProperty(name)) {
-    const addName = users[name].name;
-    names.push(addName);
-  }
-}
+let names = users.map((user) => {
+  return user.name;
+});
 
 console.log(names); // John, Pete, Mary
 // Map to objects
