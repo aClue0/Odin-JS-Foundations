@@ -20,8 +20,12 @@ const multiply = function (arr) {
   }, 1);
 };
 
-const power = function() {
-	
+const power = function (base, exp) {
+  let total = 1;
+  for (let i = 0; i < exp; i++) {
+    total *= base;
+  }
+  return total;
 };
 
 const factorial = function() {
