@@ -44,22 +44,44 @@
 // Write the function sortByAge(users) that gets an array of objects with the age property and sorts them by age.
 //
 // For instance:
+//
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 28 };
+//
+// let arr = [pete, john, mary];
+//
+// function sortByAge(arr) {
+//   return arr.sort((userA, userB) => userA.age - userB.age);
+// }
+// sortByAge(arr);
+//
+// // now: [john, mary, pete]
+// console.log(arr[0].name); // John
+// console.log(arr[1].name); // Mary
+// console.log(arr[2].name); // Pete
+
+// Get average age
+// Get average age
+// importance: 4
+// Write the function getAverageAge(users) that gets an array of objects with property age and returns the average age.
+//
+// The formula for the average is (age1 + age2 + ... + ageN) / N.
+//
+// For instance:
 
 let john = { name: "John", age: 25 };
 let pete = { name: "Pete", age: 30 };
-let mary = { name: "Mary", age: 28 };
+let mary = { name: "Mary", age: 29 };
 
-let arr = [pete, john, mary];
-
-function sortByAge(arr) {
-  return arr.sort((userA, userB) => userA.age - userB.age);
+let arr = [john, pete, mary];
+function getAverageAge(arr) {
+  let average = 0;
+  for (let i = 0; i < arr.length; i++) {
+    const user = arr[i];
+    average += user.age;
+  }
+  return average / arr.length;
 }
-sortByAge(arr);
-
-// now: [john, mary, pete]
-console.log(arr[0].name); // John
-console.log(arr[1].name); // Mary
-console.log(arr[2].name); // Pete
-
-// Get average age
+console.log(getAverageAge(arr)); // (25 + 30 + 29) / 3 = 28
 // Create keyed object from array
