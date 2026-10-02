@@ -1,10 +1,16 @@
-const factorial = function (number) {
-  let total = 0;
-  for (let i = 0; i < number; i++) {
-    total += number - i;
+const palindromes = function (string) {
+  // ^ means not , \w means  a word character , \s means  a space so all together means
+  // replace all without punctuation or spaces you should \w /g means all
+  const parsedString = string.toLowerCase().trim().replace(/[^\w]/g, "");
+  console.log(parsedString);
+  for (let i = 0; i < parsedString.length; i++) {
+    const char = parsedString[i];
+
+    if (char !== parsedString[parsedString.length - 1 - i]) {
+      return false;
+    }
   }
-  return total;
+
+  return true;
 };
-let arr = [1, 2, 3, 4];
-// console.log(sum(arr));
-console.log(factorial(5));
+console.log(palindromes("A car, a man, a mar'aca."));
